@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Истра SUP</title>
+    <meta
+      name="description"
+      content="Сплавы по реке Истра на сапбордах: прокат, маршруты, инструкторы и бронирование дат."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Unbounded:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-row">
+          <a class="brand" href="#top" aria-label="Истра SUP">
+            <img class="logo-mark" src="./images/Sup Logo Main.svg" alt="Истра SUP" />
+          </a>
+          <nav class="main-nav" aria-label="Основная навигация">
+            <a href="#hero">Главная</a>
+            <a href="#services">Сапбординг</a>
+            <a href="#calendar">Календарь</a>
+            <a href="#faq">Вопросы</a>
+          </nav>
+          <div class="nav-actions">
+            <a class="button button-secondary" href="#compare">Маршруты</a>
+            <a class="button button-primary" href="#cta">Записаться</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero section-tinted" id="hero">
+          <div class="container">
+            <div class="hero-card">
+              <div class="hero-copy">
+                <p class="eyebrow">Река Истра</p>
+                <h1>Сплав по реке Истра на сапбордах</h1>
+                <p class="lead">
+                  Вода течет, и вы движетесь с ней. Это просто, это честно, это
+                  живо. Приходите на Истру и почувствуйте.
+                </p>
+                <div class="hero-actions">
+                  <a class="button button-primary" href="#cta">Записаться</a>
+                  <a class="button button-secondary" href="#services">Подробнее</a>
+                </div>
+              </div>
+              <div class="hero-media">
+                <img
+                  src="./images/hero.webp"
+                  alt="Девушка с сапбордом на берегу"
+                  width="640"
+                  height="640"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="services">
+          <div class="container">
+            <div class="section-heading centered">
+              <p class="eyebrow">Услуги</p>
+              <h2>Что мы предлагаем</h2>
+              <p>
+                Полный набор оборудования для начинающих и опытных, чтобы вы
+                просто выбрали формат и вышли на воду.
+              </p>
+            </div>
+            <div class="service-grid">
+              <article class="image-card">
+                <img
+                  src="./images/service-rent.webp"
+                  alt="Прокат сапбордов"
+                  width="405"
+                  height="437"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="image-card-copy">
+                  <h3>Прокат сапбордов</h3>
+                  <p>Пятнадцать досок, готовых к воде каждый день.</p>
+                </div>
+              </article>
+              <article class="image-card">
+                <img
+                  src="./images/service-guide.webp"
+                  alt="Инструктор на воде"
+                  width="405"
+                  height="437"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="image-card-copy">
+                  <h3>Инструктор на воде</h3>
+                  <p>Проводник покажет маршрут и поможет поймать баланс.</p>
+                </div>
+              </article>
+              <article class="image-card">
+                <img
+                  src="./images/service-tour.webp"
+                  alt="Групповые и личные туры"
+                  width="405"
+                  height="437"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="image-card-copy">
+                  <h3>Групповые и личные туры</h3>
+                  <p>Один, вдвоем или всей компанией, маршрут под настроение.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-compact-top" id="calendar">
+          <div class="container narrow">
+            <div class="section-heading centered">
+              <p class="eyebrow">Расписание</p>
+              <h2>Календарь сплавов</h2>
+              <p>
+                Смотрите свободные дни и занятые окна. Выбирайте дату, которая
+                вам подходит.
+              </p>
+            </div>
+            <div class="calendar-card">
+              <div class="calendar-top">
+                <div>
+                  <p class="calendar-month">Июнь 2026</p>
+                  <p class="calendar-caption">Нажмите на удобную дату для записи</p>
+                </div>
+                <span class="calendar-pill">12 свободных окон</span>
+              </div>
+              <div class="calendar-grid" id="calendar-grid"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="routes">
+          <div class="container">
+            <div class="section-heading centered">
+              <p class="eyebrow">Маршруты</p>
+              <h2>Как начать сплав</h2>
+              <p>Готовые форматы для первого выхода, прогулки на выходных и длинного дня на воде.</p>
+            </div>
+            <div class="route-grid">
+              <article class="route-card tall">
+                <img
+                  src="./images/route-short.webp"
+                  alt="Экспресс-маршрут"
+                  width="405"
+                  height="630"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="route-card-copy">
+                  <p class="eyebrow inverted">Короткий старт</p>
+                  <h3>Экспресс-маршрут для первого знакомства</h3>
+                  <p>Спокойный участок реки, базовый инструктаж и мягкий темп для первого опыта.</p>
+                  <a class="button button-ghost" href="#cta">Выбрать</a>
+                </div>
+              </article>
+              <article class="route-card tall">
+                <img
+                  src="./images/route-halfday.webp"
+                  alt="Полудневный маршрут"
+                  width="405"
+                  height="630"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="route-card-copy">
+                  <p class="eyebrow inverted">Средний маршрут</p>
+                  <h3>Полудневный маршрут с остановками и фото-точками</h3>
+                  <p>Баланс между прогулкой, видом на берег и временем на воде.</p>
+                  <a class="button button-ghost" href="#cta">Выбрать</a>
+                </div>
+              </article>
+              <article class="route-card tall">
+                <img
+                  src="./images/route-long.webp"
+                  alt="Сплав на весь день"
+                  width="405"
+                  height="630"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="route-card-copy">
+                  <p class="eyebrow inverted">Длинный день</p>
+                  <h3>Сплав на весь день по самым тихим участкам Истры</h3>
+                  <p>Для тех, кто хочет ритм реки, паузы на берегу и длинную дистанцию.</p>
+                  <a class="button button-ghost" href="#cta">Выбрать</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container split-layout">
+            <div class="split-copy">
+              <p class="eyebrow">Преимущества</p>
+              <h2>Места и маршруты на выходные</h2>
+              <p>
+                Истра удобна для коротких поездок из города. Мы помогаем быстро
+                собраться, выбрать доску и выйти на воду без длинной подготовки.
+              </p>
+              <div class="stats-inline">
+                <div>
+                  <strong>12</strong>
+                  <span>досок для прогулки</span>
+                </div>
+                <div>
+                  <strong>47</strong>
+                  <span>минут от МКАД</span>
+                </div>
+              </div>
+              <a class="button button-secondary" href="#compare">Маршруты</a>
+            </div>
+            <div class="split-media">
+              <img
+                src="./images/weekend.webp"
+                alt="Девушка на сапборде у причала"
+                width="600"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="highlights">
+          <div class="container">
+            <div class="section-heading centered">
+              <p class="eyebrow">Особенности</p>
+              <h2>Что делает нас особенными</h2>
+              <p>Не просто аренда досок, а готовый формат отдыха на реке с продуманной логистикой.</p>
+            </div>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <img
+                  src="./images/highlight-scenic.webp"
+                  alt="Живописные маршруты"
+                  width="405"
+                  height="550"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="feature-card-copy">
+                  <h3>Живописные маршруты</h3>
+                  <p>Показываем участки, где берег действительно хочется рассматривать.</p>
+                </div>
+              </article>
+              <article class="feature-card">
+                <img
+                  src="./images/highlight-group.webp"
+                  alt="Групповые прогулки"
+                  width="405"
+                  height="550"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="feature-card-copy">
+                  <h3>Групповые прогулки</h3>
+                  <p>Форматы для друзей, пар и небольших корпоративных команд.</p>
+                </div>
+              </article>
+              <article class="feature-card">
+                <img
+                  src="./images/weekend.webp"
+                  alt="Личное сопровождение"
+                  width="405"
+                  height="550"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="feature-card-copy">
+                  <h3>Личное сопровождение</h3>
+                  <p>Если нужен спокойный темп, отдельный инструктор и помощь на каждом этапе.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container stats-layout">
+            <div class="section-heading centered">
+              <p class="eyebrow">Цифры</p>
+              <h2>Что мы сделали за прошлый сезон</h2>
+              <p>Понятные цифры вместо громких обещаний.</p>
+            </div>
+            <div class="stats-panel">
+              <div class="stats-media">
+                <img
+                  src="./images/highlight-personal.webp"
+                  alt="Человек катается на сапе"
+                  width="845"
+                  height="565"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="stats-stack">
+                <article>
+                  <strong>15</strong>
+                  <p>досок доступны ежедневно в высокий сезон</p>
+                </article>
+                <article>
+                  <strong>850+</strong>
+                  <p>гостей вышли на воду с нашей базой за сезон</p>
+                </article>
+                <article>
+                  <strong>300+</strong>
+                  <p>часов инструкторского сопровождения и обучения</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section testimonials">
+          <div class="container">
+            <div class="section-heading centered">
+              <h2>Отзывы клиентов</h2>
+              <p>Коротко о том, за чем люди возвращаются на Истру снова.</p>
+            </div>
+            <div class="testimonial-grid">
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>Очень спокойный маршрут, приятно, что команда не торопит и реально помогает новичкам.</p>
+                <div class="testimonial-author">
+                  <img
+                    src="./images/avatar-anna.webp"
+                    alt="Анна"
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <strong>Анна П.</strong>
+                    <span>Первый сплав</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>Брали доски на полдня, все выдали быстро, маршрут объяснили без воды и суеты.</p>
+                <div class="testimonial-author">
+                  <img
+                    src="./images/avatar-igor.webp"
+                    alt="Игорь"
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <strong>Игорь К.</strong>
+                    <span>Прокат на выходных</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>Красивые места, хорошая организация и ощущение, что ты правда отдыхаешь, а не проходишь квест.</p>
+                <div class="testimonial-author">
+                  <img
+                    src="./images/avatar-maria.webp"
+                    alt="Мария"
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <strong>Мария Л.</strong>
+                    <span>Групповой тур</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+          <div class="container">
+            <div class="section-heading">
+              <h2>Вопросы</h2>
+              <p>Основное перед записью: что брать с собой, как проходит старт и кому подойдет маршрут.</p>
+            </div>
+            <div class="faq-grid">
+              <article class="faq-card">
+                <h3>Нужен ли опыт?</h3>
+                <p>Нет. Для новичков есть короткий инструктаж на берегу и спокойный старт на воде.</p>
+              </article>
+              <article class="faq-card">
+                <h3>Что входит в аренду?</h3>
+                <p>Доска, весло, страховочный лиш, жилет и базовый бриф по маршруту.</p>
+              </article>
+              <article class="faq-card">
+                <h3>Можно ли приехать компанией?</h3>
+                <p>Да, мы ведем как небольшие группы друзей, так и камерные корпоративные выезды.</p>
+              </article>
+              <article class="faq-card">
+                <h3>Если будет ветер?</h3>
+                <p>Мы заранее предупреждаем о погоде и предлагаем альтернативный слот, если условия некомфортные.</p>
+              </article>
+              <article class="faq-card">
+                <h3>Сколько длится маршрут?</h3>
+                <p>Есть быстрые прогулки на 1,5 часа и длинные форматы на полдня и целый день.</p>
+              </article>
+              <article class="faq-card">
+                <h3>Как записаться?</h3>
+                <p>Выберите дату, оставьте контакты и получите подтверждение с деталями по месту старта.</p>
+              </article>
+            </div>
+            <div class="faq-footer">
+              <div>
+                <h3>Остались вопросы?</h3>
+                <p>Напишите нам, и мы подберем маршрут под ваш уровень и ритм.</p>
+              </div>
+              <a class="button button-primary" href="#footer">Связаться</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section cta-section" id="cta">
+          <div class="container split-layout cta-card">
+            <div class="split-copy">
+              <h2>Приходите на Истру прямо сейчас</h2>
+              <p>Выберите дату, возьмите друзей и оставьте все остальное нам: доски, инструктаж и маршрут по воде.</p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="tel:+74951234567">Позвонить</a>
+                <a class="button button-secondary" href="mailto:info@istrasup.ru">Написать</a>
+              </div>
+            </div>
+            <div class="split-media">
+              <img
+                src="./images/stats.webp"
+                alt="Компания на сапбордах"
+                width="600"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="compare">
+          <div class="container">
+            <div class="section-heading centered">
+              <p class="eyebrow">Сравнение</p>
+              <h2>Сапбординг по реке Истра</h2>
+              <p>Сравните форматы и выберите прогулку под ваш день, темп и компанию.</p>
+            </div>
+            <div class="compare-table-wrapper">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>Тариф</th>
+                    <th>Экспресс</th>
+                    <th>Полдня</th>
+                    <th>Полный день</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Продолжительность</td>
+                    <td>1.5 часа</td>
+                    <td>4 часа</td>
+                    <td>8 часов</td>
+                  </tr>
+                  <tr>
+                    <td>Инструктор на воде</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                  </tr>
+                  <tr>
+                    <td>Прокат доски включен</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                  </tr>
+                  <tr>
+                    <td>Спасательный жилет</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                  </tr>
+                  <tr>
+                    <td>Маршрут по Истре</td>
+                    <td>Нет</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                  </tr>
+                  <tr>
+                    <td>Фотопаузы и длинные остановки</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="compare-actions">
+              <a class="button button-secondary" href="#calendar">Выбрать</a>
+              <a class="text-link" href="#footer">Подробнее</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <img class="logo-mark footer-logo-mark" src="./images/Sup Logo White.svg" alt="Истра SUP" />
+            <div class="footer-copy">
+              <div>
+                <strong>Адрес</strong>
+                <p>Московская область, река Истра, пункт проката</p>
+              </div>
+              <div>
+                <strong>Контакт</strong>
+                <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                <p><a href="mailto:info@istrasup.ru">info@istrasup.ru</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="#services">О центре</a>
+            <a href="#calendar">Расписание</a>
+            <a href="#routes">Прокат досок</a>
+            <a href="#highlights">Инструкторы</a>
+            <a href="#cta">Записаться</a>
+            <a href="#faq">Вопросы</a>
+            <a href="#footer">Контакты</a>
+            <a href="#hero">Галерея</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <p>© <span id="year"></span> Сапбординг по реке Истра</p>
+          <a href="#top">Политика конфиденциальности</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
